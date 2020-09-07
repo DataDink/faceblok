@@ -1,0 +1,43 @@
+{
+  "mutation-types": [
+    "style",
+    "hover",
+    "remove"
+  ],
+  "content-blockers": [
+    {
+      "name": "Sponsored Feeds",
+      "element-selector": "div[data-pagelet*=FeedUnit]",
+      "content-selector": "[aria-label=Sponsored]",
+      "content-match": "",
+      "mutation-type": 1,
+      "mutation-data": {
+        "filter": "blur(.5em) sepia()",
+        "height": "20em",
+        "overflow": "hidden",
+        "border": ".25em solid red",
+        "transition": "0.5s ease filter",
+        "marginBottom": "1em"
+      },
+      "flow-text": true,
+      "enabled": true
+    },
+    {
+      "name": "Suggested Feeds",
+      "element-selector": "div[data-pagelet*=FeedUnit]",
+      "content-selector": "span",
+      "content-match": "^\\s*Suggested for You\\s*$",
+      "mutation-type": 1,
+      "mutation-data": {
+        "filter": "blur(.5em) sepia()",
+        "height": "20em",
+        "overflow": "hidden",
+        "border": ".25em solid red",
+        "transition": "0.5s ease filter, 0.5s ease height",
+        "marginBottom": "1em"
+      },
+      "flow-text": false,
+      "enabled": true
+    }
+  ]
+}
